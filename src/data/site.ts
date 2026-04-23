@@ -8,7 +8,6 @@ export const club = {
   officialName: "Achievers Club",
   clubNumber: "5183",
   chartered: "2003-02-07",
-  area: "E01",
   city: "Marbella",
   country: "Spain",
   tagline: "Where Leaders Are Made",
