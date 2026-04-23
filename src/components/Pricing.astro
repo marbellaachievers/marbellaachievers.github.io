@@ -1,0 +1,50 @@
+---
+import { costs } from "../data/site";
+---
+
+<section id="pricing" class="section bg-cyan-700 text-white">
+  <div class="container mx-auto max-w-6xl">
+    <div class="max-w-2xl">
+      <p class="section-eyebrow text-happy">Pricing &amp; value</p>
+      <h2 class="section-heading text-white">{costs.headline}</h2>
+      <p class="mt-4 text-lg text-slate-100">
+        One of the best-value investments in your own growth you will ever make &mdash; and
+        every cent goes back into the program.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-5 md:grid-cols-3">
+      <article class="rounded-2xl bg-white p-6 text-slate-800 shadow-sm">
+        <p class="text-sm font-semibold uppercase tracking-widest text-maroon">Intl. dues</p>
+        <p class="mt-2 font-display text-4xl font-extrabold text-slate-900">{costs.intlDuesAmount}</p>
+        <p class="text-sm text-slate-500">{costs.intlDuesPeriod}</p>
+        <p class="mt-4 text-sm text-slate-600">{costs.intlDuesNote}</p>
+      </article>
+
+      <article class="rounded-2xl bg-white p-6 text-slate-800 shadow-sm ring-2 ring-happy">
+        <p class="text-sm font-semibold uppercase tracking-widest text-maroon">Local club fee</p>
+        <p class="mt-2 font-display text-4xl font-extrabold text-slate-900">{costs.localFeeAmount}</p>
+        <p class="text-sm text-slate-500">{costs.localFeePeriod}</p>
+        <p class="mt-4 text-sm text-slate-600">{costs.localFeeNote}</p>
+      </article>
+
+      <article class="rounded-2xl bg-white p-6 text-slate-800 shadow-sm">
+        <p class="text-sm font-semibold uppercase tracking-widest text-maroon">New-member fee</p>
+        <p class="mt-2 font-display text-4xl font-extrabold text-slate-900">{costs.joiningFeeAmount}</p>
+        <p class="text-sm text-slate-500">{costs.joiningFeePeriod}</p>
+        <p class="mt-4 text-sm text-slate-600">{costs.joiningFeeNote}</p>
+      </article>
+    </div>
+
+    <div class="mt-10 grid gap-6 rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 sm:grid-cols-2">
+      <p class="text-slate-100">
+        <strong class="text-white">First six months, brand new?</strong><br />
+        {costs.firstSixMonthsNote}
+      </p>
+      <p class="text-slate-100">
+        <strong class="text-white">Non-profit, through and through.</strong><br />
+        {costs.nonprofitNote}
+      </p>
+    </div>
+  </div>
+</section>

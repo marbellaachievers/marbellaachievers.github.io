@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import img1 from "../assets/images/meeting-2026-02-14.jpg";
+import img2 from "../assets/images/competion.jpeg";
+import img3 from "../assets/images/meeting_2026-04-22.jpg";
+import { club } from "../data/site";
+
+const gallery = [
+  { src: img1, alt: "Marbella Achievers club meeting" },
+  { src: img2, alt: "Marbella Achievers members at a speech contest" },
+  { src: img3, alt: "A Wednesday evening meeting at Les Roches Marbella" },
+];
+---
+
+<section id="about" class="section bg-[--color-paper]">
+  <div class="container mx-auto max-w-6xl">
+    <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div>
+        <p class="section-eyebrow">About the club</p>
+        <h2 class="section-heading">Marbella&rsquo;s oldest Toastmasters club.</h2>
+        <p class="mt-4 text-lg text-slate-600">
+          We chartered as the <strong>{club.officialName}</strong> &mdash; club number {club.clubNumber} &mdash;
+          on {new Date(club.chartered).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}.
+          More than two decades on, we are still meeting every Wednesday and still welcoming new members
+          from every background imaginable.
+        </p>
+        <p class="mt-4 text-slate-600">
+          Our members come from across the world. Some are here for a few months, some for a few decades.
+          What everyone shares is a commitment to becoming a better speaker, a better listener, and a
+          better leader &mdash; and to having a great evening doing it.
+        </p>
+        <dl class="mt-8 grid grid-cols-2 gap-4 text-sm">
+          <div class="rounded-lg bg-white p-4 shadow-sm">
+            <dt class="text-slate-500">Club number</dt>
+            <dd class="font-display text-lg font-bold text-slate-900">{club.clubNumber}</dd>
+          </div>
+          <div class="rounded-lg bg-white p-4 shadow-sm">
+            <dt class="text-slate-500">Area</dt>
+            <dd class="font-display text-lg font-bold text-slate-900">{club.area}</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <Image src={gallery[0].src} alt={gallery[0].alt} widths={[240, 480]} sizes="(min-width:1024px) 280px, 50vw" class="aspect-[4/5] h-full w-full rounded-2xl object-cover shadow-md" />
+        <div class="flex flex-col gap-3">
+          <Image src={gallery[1].src} alt={gallery[1].alt} widths={[240, 480]} sizes="(min-width:1024px) 280px, 50vw" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-md" />
+          <Image src={gallery[2].src} alt={gallery[2].alt} widths={[240, 480]} sizes="(min-width:1024px) 280px, 50vw" class="aspect-square w-full rounded-2xl object-cover shadow-md" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
