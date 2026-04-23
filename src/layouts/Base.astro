@@ -38,8 +38,7 @@ const jsonLdEvent = {
   "@context": "https://schema.org",
   "@type": "Event",
   name: `${club.shortName} Weekly Meeting`,
-  description:
-    "Weekly Toastmasters meeting. Guests welcome \u2014 first visit free.",
+  description: "Weekly Toastmasters meeting. Guests welcome \u2014 first visit free.",
   eventSchedule: {
     "@type": "Schedule",
     repeatFrequency: "P1W",
@@ -115,14 +114,8 @@ const jsonLdEvent = {
       href="https://fonts.bunny.net/css?family=montserrat:700,800|source-sans-3:400,600,700&display=swap"
     />
 
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify(jsonLdOrganization)}
-    />
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify(jsonLdEvent)}
-    />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdOrganization)} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLdEvent)} />
   </head>
 
   <body>

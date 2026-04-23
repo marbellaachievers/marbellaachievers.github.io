@@ -8,7 +8,13 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "npm run check && npm run format:check",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.2.1",
@@ -18,7 +24,11 @@
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.4",
     "@tailwindcss/typography": "^0.5.15",
-    "typescript": "^5.7.2"
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   }
 }
