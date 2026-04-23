@@ -6,7 +6,7 @@ export const club = {
   name: "Marbella Achievers Toastmasters Club",
   shortName: "Marbella Achievers",
   officialName: "Achievers Club",
-  clubNumber: "00005183",
+  clubNumber: "5183",
   chartered: "2003-02-07",
   area: "E01",
   city: "Marbella",
@@ -66,7 +66,7 @@ export const links = {
   },
   toastmastersDirectory: {
     label: "Visit Club on Toastmasters.org",
-    href: "https://www.toastmasters.org/Find-a-Club/00005183-achievers-club",
+    href: "https://www.toastmasters.org/Find-a-Club/5183-achievers-club",
   },
   instagram: {
     label: "Instagram",
