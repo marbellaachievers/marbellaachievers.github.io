@@ -171,7 +171,7 @@ export const faqs = [
   },
   {
     q: "Do you meet every week, year round?",
-    a: "Almost. We pause for about two weeks around Christmas and pick back up after Reyes Magos (6 January). Otherwise, every Wednesday.",
+    a: "Almost. We pause for about two weeks around Christmas and pick back up after Reyes Magos (6 January). Sometimees we vote to take a break in August.  Otherwise, every Wednesday.",
   },
   {
     q: "What is Pathways?",
