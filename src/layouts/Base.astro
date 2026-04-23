@@ -1,0 +1,136 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { club, meeting, links, seo } from "../data/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = seo.title, description = seo.description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+
+const jsonLdOrganization = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: club.name,
+  alternateName: club.officialName,
+  url: Astro.site?.toString(),
+  logo: new URL("/favicon.svg", Astro.site).toString(),
+  sameAs: [
+    links.instagram.href,
+    links.facebook.href,
+    links.linkedin.href,
+    links.toastmastersDirectory.href,
+  ],
+  foundingDate: club.chartered,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: meeting.venueName,
+    addressLocality: club.city,
+    addressCountry: club.country,
+  },
+};
+
+const jsonLdEvent = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: `${club.shortName} Weekly Meeting`,
+  description:
+    "Weekly Toastmasters meeting. Guests welcome \u2014 first visit free.",
+  eventSchedule: {
+    "@type": "Schedule",
+    repeatFrequency: "P1W",
+    byDay: "https://schema.org/Wednesday",
+    startTime: meeting.startTime,
+    duration: "PT90M",
+  },
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  eventStatus: "https://schema.org/EventScheduled",
+  location: {
+    "@type": "Place",
+    name: meeting.venueName,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: meeting.addressLine,
+      addressLocality: club.city,
+      addressCountry: club.country,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: meeting.geo.latitude,
+      longitude: meeting.geo.longitude,
+    },
+  },
+  organizer: {
+    "@type": "Organization",
+    name: club.name,
+    url: Astro.site?.toString(),
+  },
+  isAccessibleForFree: true,
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "EUR",
+    availability: "https://schema.org/InStock",
+    url: links.toastmastersDirectory.href,
+  },
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={seo.keywords.join(", ")} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={seo.locale} />
+    <meta property="og:image" content={new URL(seo.ogImage, Astro.site).toString()} />
+
+    <meta name="twitter:card" content={seo.twitterCard} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(seo.ogImage, Astro.site).toString()} />
+
+    <meta name="theme-color" content="#772432" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.bunny.net/css?family=montserrat:700,800|source-sans-3:400,600,700&display=swap"
+    />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLdOrganization)}
+    />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLdEvent)}
+    />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Nav />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

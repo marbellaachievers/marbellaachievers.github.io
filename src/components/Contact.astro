@@ -1,0 +1,43 @@
+---
+import SocialRow from "./SocialRow.astro";
+import { links } from "../data/site";
+---
+
+<section id="contact" class="section bg-white">
+  <div class="container mx-auto max-w-5xl">
+    <div class="max-w-2xl">
+      <p class="section-eyebrow">Contact &amp; visit</p>
+      <h2 class="section-heading">Guests are welcome &mdash; always.</h2>
+      <p class="mt-4 text-lg text-slate-600">
+        Come and check us out, no strings attached. If you have questions, don&rsquo;t hesitate to reach out on WhatsApp,
+        Instagram, or any of our social channels.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-4 md:grid-cols-3">
+      <a href={links.toastmastersDirectory.href} rel="noopener" target="_blank" class="card block">
+        <p class="text-sm font-semibold uppercase tracking-widest text-maroon">Primary</p>
+        <h3 class="mt-2 font-display text-xl font-bold text-slate-900">Visit a meeting</h3>
+        <p class="mt-2 text-slate-600">Fill out the Visit Club form on Toastmasters.org &mdash; we&rsquo;ll be expecting you.</p>
+      </a>
+
+      <a href={links.whatsappDirect.href} rel="noopener" target="_blank" class="card block border-happy/60 bg-happy/20">
+        <p class="text-sm font-semibold uppercase tracking-widest text-maroon">Prefer to chat?</p>
+        <h3 class="mt-2 font-display text-xl font-bold text-slate-900">Message us on WhatsApp</h3>
+        <p class="mt-2 text-slate-600">A real person on the other end. Ask us anything.</p>
+        <p class="mt-3 text-sm text-slate-500">{links.whatsappDirect.phoneDisplay}</p>
+      </a>
+
+      <a href={links.whatsappGroup.href} rel="noopener" target="_blank" class="card block">
+        <p class="text-sm font-semibold uppercase tracking-widest text-maroon">Community</p>
+        <h3 class="mt-2 font-display text-xl font-bold text-slate-900">Join our WhatsApp group</h3>
+        <p class="mt-2 text-slate-600">Meet members, get meeting reminders, introduce yourself &mdash; we love knowing who&rsquo;s new.</p>
+      </a>
+    </div>
+
+    <div class="mt-10 flex flex-col items-start justify-between gap-4 rounded-2xl bg-slate-50 p-6 sm:flex-row sm:items-center">
+      <p class="font-display text-lg font-bold text-slate-900">You&rsquo;ll also find us on</p>
+      <SocialRow />
+    </div>
+  </div>
+</section>

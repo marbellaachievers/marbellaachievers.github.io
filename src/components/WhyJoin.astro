@@ -1,0 +1,39 @@
+---
+import { benefits } from "../data/site";
+
+const icons: Record<string, string> = {
+  mic: "M12 1v11m0 0a4 4 0 0 0 4-4V5a4 4 0 0 0-8 0v3a4 4 0 0 0 4 4Zm-7 0a7 7 0 0 0 14 0M12 19v4",
+  leader: "M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M9 11a4 4 0 1 1 8 0M23 21v-2a4 4 0 0 0-3-3.87",
+  path: "M3 12c3 0 3-4 6-4s3 8 6 8 3-4 6-4",
+  globe: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10ZM2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z",
+  hand: "M18 11V6a2 2 0 0 0-4 0v5M14 10V4a2 2 0 0 0-4 0v6M10 10.5V6a2 2 0 0 0-4 0v8M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15",
+  coin: "M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6",
+};
+---
+
+<section id="why-join" class="section bg-[--color-paper]">
+  <div class="container mx-auto max-w-6xl">
+    <div class="max-w-2xl">
+      <p class="section-eyebrow">Why join us</p>
+      <h2 class="section-heading">Afraid of public speaking? You&rsquo;re in good company.</h2>
+      <p class="mt-4 text-lg text-slate-600">
+        You don&rsquo;t have to be a skilled speaker to walk through our door. Wherever you are today,
+        this is a safe, encouraging place to get better &mdash; one meeting at a time.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {benefits.map((b) => (
+        <article class="card">
+          <div class="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-maroon/10 text-maroon">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d={icons[b.icon] ?? icons.mic} />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold text-slate-900">{b.title}</h3>
+          <p class="mt-2 text-slate-600">{b.body}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+---
+import { meeting, links } from "../data/site";
+---
+
+<section id="meetings" class="section bg-white">
+  <div class="container mx-auto max-w-6xl">
+    <div class="max-w-2xl">
+      <p class="section-eyebrow">Meetings</p>
+      <h2 class="section-heading">Every {meeting.day}, 8:00 PM sharp.</h2>
+    </div>
+
+    <div class="mt-10 grid gap-8 lg:grid-cols-[1fr_1.1fr]">
+      <div class="space-y-5">
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-display text-xl font-bold text-slate-900">When</h3>
+          <p class="mt-2 text-slate-600">
+            <strong>{meeting.day}s at {meeting.startTimeLabel}</strong> &mdash; we start promptly.
+            Please try to arrive by <strong>{meeting.arriveByLabel}</strong>.
+          </p>
+          <p class="mt-2 text-slate-600">{meeting.durationLabel}.</p>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200 p-6">
+          <h3 class="font-display text-xl font-bold text-slate-900">Where</h3>
+          <p class="mt-2 text-slate-600">
+            <strong>{meeting.venueName}</strong><br />
+            <span class="text-sm text-slate-500">{meeting.venueSubtitle}</span><br />
+            {meeting.room}
+          </p>
+          <p class="mt-3 text-sm text-slate-500">{meeting.addressLine}</p>
+          <a href={meeting.directionsUrl} rel="noopener" target="_blank" class="btn-ghost mt-3 px-0">
+            Get directions
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+
+        <div class="rounded-2xl border border-happy/60 bg-happy/20 p-6">
+          <h3 class="font-display text-xl font-bold text-slate-900">Holiday break</h3>
+          <p class="mt-2 text-slate-700">{meeting.holidayBreak}</p>
+        </div>
+
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href={links.toastmastersDirectory.href} rel="noopener" target="_blank" class="btn-primary">
+            Visit a meeting &mdash; it&rsquo;s free
+          </a>
+          <a href={links.whatsappDirect.href} rel="noopener" target="_blank" class="btn-secondary">
+            Ask us anything
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="map-wrapper shadow-lg">
+          <iframe
+            src={meeting.mapEmbedSrc}
+            title={`Map to ${meeting.venueName}`}
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
