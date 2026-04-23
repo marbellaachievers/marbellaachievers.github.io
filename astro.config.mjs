@@ -7,10 +7,7 @@ export default defineConfig({
   site: "https://marbellaachievers.github.io",
   trailingSlash: "ignore",
   compressHTML: true,
-  integrations: [
-    tailwind({ applyBaseStyles: false }),
-    sitemap(),
-  ],
+  integrations: [tailwind({ applyBaseStyles: false }), sitemap()],
   build: {
     assets: "_astro",
     inlineStylesheets: "auto",

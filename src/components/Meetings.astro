@@ -14,8 +14,8 @@ import { meeting, links } from "../data/site";
         <div class="rounded-2xl border border-slate-200 p-6">
           <h3 class="font-display text-xl font-bold text-slate-900">When</h3>
           <p class="mt-2 text-slate-600">
-            <strong>{meeting.day}s at {meeting.startTimeLabel}</strong> &mdash; we start promptly.
-            Please try to arrive by <strong>{meeting.arriveByLabel}</strong>.
+            <strong>{meeting.day}s at {meeting.startTimeLabel}</strong> &mdash; we start promptly. Please
+            try to arrive by <strong>{meeting.arriveByLabel}</strong>.
           </p>
           <p class="mt-2 text-slate-600">{meeting.durationLabel}.</p>
         </div>
@@ -28,9 +28,23 @@ import { meeting, links } from "../data/site";
             {meeting.room}
           </p>
           <p class="mt-3 text-sm text-slate-500">{meeting.addressLine}</p>
-          <a href={meeting.directionsUrl} rel="noopener" target="_blank" class="btn-ghost mt-3 px-0">
+          <a
+            href={meeting.directionsUrl}
+            rel="noopener"
+            target="_blank"
+            class="btn-ghost mt-3 px-0"
+          >
             Get directions
-            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            <svg
+              class="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg
+            >
           </a>
         </div>
 
@@ -40,7 +54,12 @@ import { meeting, links } from "../data/site";
         </div>
 
         <div class="flex flex-wrap gap-3 pt-2">
-          <a href={links.toastmastersDirectory.href} rel="noopener" target="_blank" class="btn-primary">
+          <a
+            href={links.toastmastersDirectory.href}
+            rel="noopener"
+            target="_blank"
+            class="btn-primary"
+          >
             Visit a meeting &mdash; it&rsquo;s free
           </a>
           <a href={links.whatsappDirect.href} rel="noopener" target="_blank" class="btn-secondary">
@@ -56,8 +75,7 @@ import { meeting, links } from "../data/site";
             title={`Map to ${meeting.venueName}`}
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
     </div>

@@ -55,7 +55,7 @@ All of the following should live in `src/data/site.ts` so a single edit propagat
 ### 4.1 Meeting
 
 - **Day:** Wednesday
-- **Start:** 20:00 (8pm) — starts *promptly*
+- **Start:** 20:00 (8pm) — starts _promptly_
 - **Guest arrival:** by 19:45 (7:45pm)
 - **Duration:** ~90 minutes (±15). Surface this up-front in "What Happens at a Meeting" and FAQ so prospects can plan.
 - **Venue:** Les Roches Marbella (Global Hospitality Education)
@@ -64,17 +64,25 @@ All of the following should live in `src/data/site.ts` so a single edit propagat
 - **Post-meeting tradition:** After most meetings, members head to a nearby café for a drink or bite to eat. Mention this in Why Join (community angle) and What Happens — it's a warm differentiator and a low-pressure way for guests to chat 1:1.
 - **Map iframe:**
   ```html
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10214.129818972051!2d-4.94406522296443!3d36.50458208430579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7329d688145a79%3A0x6185ceb940c7c702!2sLes%20Roches%20Marbella%2C%20Spain%2C%20Global%20Hospitality%20Education!5e1!3m2!1sen!2ses!4v1776963443252!5m2!1sen!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10214.129818972051!2d-4.94406522296443!3d36.50458208430579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7329d688145a79%3A0x6185ceb940c7c702!2sLes%20Roches%20Marbella%2C%20Spain%2C%20Global%20Hospitality%20Education!5e1!3m2!1sen!2ses!4v1776963443252!5m2!1sen!2ses"
+    width="600"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
   ```
   Use `loading="lazy"`. Make the iframe responsive with a 16:9 or 4:3 wrapper — don't let the fixed `width`/`height` break mobile.
 
 ### 4.2 Membership costs
 
-| Fee | Amount | Frequency | Applies to |
-|---|---|---|---|
-| Toastmasters International dues | **$60 USD** | every 6 months | all members |
-| One-time new-member joining fee | **$20 USD** | once | first-time Toastmasters members only |
-| Local Achievers Club fee | **€20** | every 6 months | all members |
+| Fee                             | Amount      | Frequency      | Applies to                           |
+| ------------------------------- | ----------- | -------------- | ------------------------------------ |
+| Toastmasters International dues | **$60 USD** | every 6 months | all members                          |
+| One-time new-member joining fee | **$20 USD** | once           | first-time Toastmasters members only |
+| Local Achievers Club fee        | **€20**     | every 6 months | all members                          |
 
 - First 6 months for a new member: **≈ $100 total** for 26 weekly meetings.
 - Renewal: **$60 USD + €20** every 6 months (≈ $14/month).
@@ -83,15 +91,15 @@ All of the following should live in `src/data/site.ts` so a single edit propagat
 
 ### 4.3 Contact & social links
 
-| Channel | URL / Value | Role on site |
-|---|---|---|
-| WhatsApp direct | `+34 617 463 826` → `https://wa.me/34617463826` | "Message us" — 1:1 reply |
-| WhatsApp group chat | `https://chat.whatsapp.com/JJdolGFERtNDHBYwfQuEu4` | "Join our community" |
-| Instagram | `https://www.instagram.com/marbellaachievers/` | Social row |
-| Facebook | `https://www.facebook.com/toastmastersmarbella/` | Social row |
-| LinkedIn | `https://www.linkedin.com/company/marbella-toastmasters-achievers-club/` | Social row |
-| Toastmasters.org directory | `https://www.toastmasters.org/Find-a-Club/00005183-achievers-club` | **Primary CTA target — "Visit Club" button** |
-| GitHub repo | `https://github.com/marbellaachievers/marbellaachievers.github.io` | Footer link |
+| Channel                    | URL / Value                                                              | Role on site                                 |
+| -------------------------- | ------------------------------------------------------------------------ | -------------------------------------------- |
+| WhatsApp direct            | `+34 617 463 826` → `https://wa.me/34617463826`                          | "Message us" — 1:1 reply                     |
+| WhatsApp group chat        | `https://chat.whatsapp.com/JJdolGFERtNDHBYwfQuEu4`                       | "Join our community"                         |
+| Instagram                  | `https://www.instagram.com/marbellaachievers/`                           | Social row                                   |
+| Facebook                   | `https://www.facebook.com/toastmastersmarbella/`                         | Social row                                   |
+| LinkedIn                   | `https://www.linkedin.com/company/marbella-toastmasters-achievers-club/` | Social row                                   |
+| Toastmasters.org directory | `https://www.toastmasters.org/Find-a-Club/00005183-achievers-club`       | **Primary CTA target — "Visit Club" button** |
+| GitHub repo                | `https://github.com/marbellaachievers/marbellaachievers.github.io`       | Footer link                                  |
 
 **WhatsApp prefilled text:** `?text=Hi%2C%20I%27d%20like%20to%20visit%20a%20meeting`
 

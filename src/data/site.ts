@@ -88,38 +88,32 @@ export const links = {
 export const benefits = [
   {
     title: "Speak with confidence",
-    body:
-      "From your first Table Topic to your tenth keynote, every meeting gives you a safe, supportive stage to practice on \u2014 in English.",
+    body: "From your first Table Topic to your tenth keynote, every meeting gives you a safe, supportive stage to practice on \u2014 in English.",
     icon: "mic",
   },
   {
     title: "Grow as a leader",
-    body:
-      "Take on rotating meeting roles \u2014 Toastmaster, Evaluator, Timer \u2014 and discover how public speaking skills translate straight into leadership.",
+    body: "Take on rotating meeting roles \u2014 Toastmaster, Evaluator, Timer \u2014 and discover how public speaking skills translate straight into leadership.",
     icon: "leader",
   },
   {
     title: "Pathways learning",
-    body:
-      "Follow the official Toastmasters Pathways curriculum: self-paced online projects that turn real meetings into real progress.",
+    body: "Follow the official Toastmasters Pathways curriculum: self-paced online projects that turn real meetings into real progress.",
     icon: "path",
   },
   {
     title: "International community",
-    body:
-      "We meet in English, welcome every accent, and share the stage with expats and locals from all over the world \u2014 so does our post-meeting caf\u00E9 chat.",
+    body: "We meet in English, welcome every accent, and share the stage with expats and locals from all over the world \u2014 so does our post-meeting caf\u00E9 chat.",
     icon: "globe",
   },
   {
     title: "Zero pressure first visit",
-    body:
-      "Come as a guest, sit back, and watch. You are never asked to speak on your first visit \u2014 learn the ropes, then jump in when you are ready.",
+    body: "Come as a guest, sit back, and watch. You are never asked to speak on your first visit \u2014 learn the ropes, then jump in when you are ready.",
     icon: "hand",
   },
   {
     title: "Real progress, real cheap",
-    body:
-      "Weekly practice for about $10 a month. Compare that to a single coaching session and the value becomes obvious.",
+    body: "Weekly practice for about $10 a month. Compare that to a single coaching session and the value becomes obvious.",
     icon: "coin",
   },
 ] as const;
@@ -127,23 +121,19 @@ export const benefits = [
 export const meetingFormat = [
   {
     title: "Prepared speeches",
-    body:
-      "Two or three members deliver short speeches they have rehearsed as part of their Pathways projects.",
+    body: "Two or three members deliver short speeches they have rehearsed as part of their Pathways projects.",
   },
   {
     title: "Table Topics",
-    body:
-      "A fun round of short impromptu speeches \u2014 one- to two-minute answers to a surprise question. This is where confidence is really built.",
+    body: "A fun round of short impromptu speeches \u2014 one- to two-minute answers to a surprise question. This is where confidence is really built.",
   },
   {
     title: "Evaluations",
-    body:
-      "Every speaker gets constructive, encouraging feedback from a trained evaluator. You leave the meeting knowing exactly what to work on next.",
+    body: "Every speaker gets constructive, encouraging feedback from a trained evaluator. You leave the meeting knowing exactly what to work on next.",
   },
   {
     title: "Meeting roles",
-    body:
-      "Timer, Ah-Counter, Grammarian, Toastmaster of the evening \u2014 rotating roles that sharpen listening, leadership, and attention to detail.",
+    body: "Timer, Ah-Counter, Grammarian, Toastmaster of the evening \u2014 rotating roles that sharpen listening, leadership, and attention to detail.",
   },
 ] as const;
 

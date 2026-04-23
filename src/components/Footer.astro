@@ -19,7 +19,8 @@ const year = new Date().getFullYear();
         </div>
       </div>
       <p class="mt-4 max-w-sm text-sm text-slate-300">
-        Marbella's welcoming, English-speaking Toastmasters club. Guests always free on their first visit.
+        Marbella's welcoming, English-speaking Toastmasters club. Guests always free on their first
+        visit.
       </p>
     </div>
 
@@ -31,21 +32,53 @@ const year = new Date().getFullYear();
     </div>
 
     <div>
-      <h2 class="font-display text-sm font-bold uppercase tracking-wider text-happy">Quick links</h2>
+      <h2 class="font-display text-sm font-bold uppercase tracking-wider text-happy">
+        Quick links
+      </h2>
       <ul class="mt-4 space-y-2 text-sm">
-        <li><a href={links.toastmastersDirectory.href} rel="noopener" target="_blank" class="hover:text-happy">Visit Club on Toastmasters.org</a></li>
-        <li><a href={links.whatsappGroup.href} rel="noopener" target="_blank" class="hover:text-happy">WhatsApp group chat</a></li>
-        <li><a href={links.whatsappDirect.href} rel="noopener" target="_blank" class="hover:text-happy">Message us on WhatsApp</a></li>
-        <li><a href={links.github.href} rel="noopener" target="_blank" class="hover:text-happy">GitHub repository</a></li>
+        <li>
+          <a
+            href={links.toastmastersDirectory.href}
+            rel="noopener"
+            target="_blank"
+            class="hover:text-happy">Visit Club on Toastmasters.org</a
+          >
+        </li>
+        <li>
+          <a href={links.whatsappGroup.href} rel="noopener" target="_blank" class="hover:text-happy"
+            >WhatsApp group chat</a
+          >
+        </li>
+        <li>
+          <a
+            href={links.whatsappDirect.href}
+            rel="noopener"
+            target="_blank"
+            class="hover:text-happy">Message us on WhatsApp</a
+          >
+        </li>
+        <li>
+          <a href={links.github.href} rel="noopener" target="_blank" class="hover:text-happy"
+            >GitHub repository</a
+          >
+        </li>
       </ul>
     </div>
   </div>
 
   <div class="border-t border-white/10">
-    <div class="container mx-auto flex flex-col items-start gap-3 py-6 text-xs text-slate-300 sm:flex-row sm:items-center sm:justify-between">
+    <div
+      class="container mx-auto flex flex-col items-start gap-3 py-6 text-xs text-slate-300 sm:flex-row sm:items-center sm:justify-between"
+    >
       <p>&copy; {year} {club.name}. All rights reserved.</p>
       <div class="flex items-center gap-3 opacity-80">
-        <Image src={tmLogo} alt="Toastmasters International" width={120} height={30} class="h-6 w-auto" />
+        <Image
+          src={tmLogo}
+          alt="Toastmasters International"
+          width={120}
+          height={30}
+          class="h-6 w-auto"
+        />
         <span>Club #{club.clubNumber}</span>
       </div>
     </div>
