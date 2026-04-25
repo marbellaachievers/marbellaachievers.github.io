@@ -44,11 +44,11 @@ export const costs = {
   localFeeAmount: "\u20AC20",
   localFeePeriod: "every 6 months",
   localFeeNote: "Covers our bank account, printed materials, and club supplies",
-  joiningFeeAmount: "$20 USD",
+  joiningFeeAmount: "$25 USD",
   joiningFeePeriod: "one-time",
   joiningFeeNote: "New-member fee \u2014 only if you have never joined Toastmasters before",
   firstSixMonthsNote:
-    "Your first six months as a brand-new member work out to about $100 total for 26 weekly meetings.",
+    "Your first six months as a brand-new member work out to about $105 total for 26 weekly meetings.",
   nonprofitNote:
     "Toastmasters is a registered non-profit. Every fee goes back into the program, learning materials, and running the club \u2014 nobody profits.",
 } as const;
@@ -152,7 +152,7 @@ export const faqs = [
   },
   {
     q: "How much does it cost?",
-    a: "About $10 a month. Toastmasters International dues are $60 USD every 6 months. Our local club fee is \u20AC20 every 6 months. New members also pay a one-time $20 USD joining fee if you have never been in Toastmasters before. Toastmasters is a non-profit \u2014 these fees cover materials and the cost of running the organization.",
+    a: "About $10 a month. Toastmasters International dues are $60 USD every 6 months. Our local club fee is \u20AC20 every 6 months. New members also pay a one-time $25 USD joining fee if you have never been in Toastmasters before. Toastmasters is a non-profit \u2014 these fees cover materials and the cost of running the organization.",
   },
   {
     q: "Do I have to commit for a long time?",

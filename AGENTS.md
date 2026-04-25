@@ -81,7 +81,7 @@ All of the following should live in `src/data/site.ts` so a single edit propagat
 | Fee                             | Amount      | Frequency      | Applies to                           |
 | ------------------------------- | ----------- | -------------- | ------------------------------------ |
 | Toastmasters International dues | **$60 USD** | every 6 months | all members                          |
-| One-time new-member joining fee | **$20 USD** | once           | first-time Toastmasters members only |
+| One-time new-member joining fee | **$25 USD** | once           | first-time Toastmasters members only |
 | Local Achievers Club fee        | **€20**     | every 6 months | all members                          |
 
 - First 6 months for a new member: **≈ $100 total** for 26 weekly meetings.
