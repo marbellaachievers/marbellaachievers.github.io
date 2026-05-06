@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { title = seo.title, description = seo.description } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+const canonical = "https://marbellatoastmasters.com/";
 
 const jsonLdOrganization = {
   "@context": "https://schema.org",
