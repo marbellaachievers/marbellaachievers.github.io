@@ -59,10 +59,6 @@ export const links = {
     href: "https://wa.me/34617463826?text=Hi%2C%20I%27d%20like%20to%20visit%20a%20meeting",
     phoneDisplay: "+34 617 463 826",
   },
-  whatsappGroup: {
-    label: "Join our WhatsApp group",
-    href: "https://chat.whatsapp.com/JJdolGFERtNDHBYwfQuEu4",
-  },
   toastmastersDirectory: {
     label: "Visit Club on Toastmasters.org",
     href: "https://www.toastmasters.org/Find-a-Club/5183-achievers-club",
